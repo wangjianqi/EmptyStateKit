@@ -10,7 +10,7 @@ import UIKit
 import EmptyStateKit
 
 extension TableState {
-    
+    // 添加format属性
     var format: EmptyStateFormat {
         switch self {
             

@@ -18,6 +18,7 @@ class TableViewController: UITableViewController {
     }
     
     var items = [Item]()
+    /// 选中的
     var selected = TableState.noNotifications
     
     override func viewDidLoad() {
@@ -84,6 +85,7 @@ extension TableViewController {
         view.emptyState.delegate = self
         
         selected = item.state
+        /// 清空了
         items = [Item]()
         tableView.reloadData()
     }
@@ -96,6 +98,7 @@ extension TableViewController {
 extension TableViewController: EmptyStateDelegate {
     
     func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        /// 获取所有的数据
         fetchData()
     }
 }

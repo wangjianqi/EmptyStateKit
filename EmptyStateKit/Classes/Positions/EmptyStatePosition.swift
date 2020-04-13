@@ -9,8 +9,10 @@
 import UIKit
 
 public typealias MarginTop = CGFloat
+// 别名
 public typealias MarginBottom = CGFloat
 
+// 位置配置
 public struct EmptyStatePosition {
     var view: EmptyStateViewPosition = .center
     var text: EmptyStateTextPosition = .center
@@ -23,18 +25,21 @@ public struct EmptyStatePosition {
     }
 }
 
+// view
 public enum EmptyStateViewPosition {
     case top
     case center
     case bottom
 }
 
+// text
 public enum EmptyStateTextPosition {
     case left
     case center
     case right
 }
 
+//
 public enum EmptyStateImagePosition {
     case top
     case bottom

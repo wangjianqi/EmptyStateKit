@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// 配置
 public struct EmptyStateFormat {
     
     /// Title attributes

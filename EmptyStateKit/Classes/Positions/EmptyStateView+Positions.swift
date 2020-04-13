@@ -39,28 +39,32 @@ extension EmptyStateView {
         messageViewLeftConstraint.constant = format.horizontalMargin
         messageViewRightConstraint.constant = format.horizontalMargin
     }
-    
+
+    /// 顶部
     func topView() {
         messageViewBottomConstraint.isActive = false
         messageViewCenterYConstraint.isActive = false
         messageViewTopConstraint.isActive = true
         messageViewTopConstraint.constant = format.verticalMargin
     }
-    
+
+    /// 中间
     func centerView() {
         messageViewTopConstraint.isActive = false
         messageViewBottomConstraint.isActive = false
         messageViewCenterYConstraint.isActive = true
         messageViewCenterYConstraint.constant = format.verticalMargin
     }
-    
+
+    /// 底部
     func bottomView() {
         messageViewCenterYConstraint.isActive = false
         messageViewTopConstraint.isActive = false
         messageViewBottomConstraint.isActive = true
         messageViewBottomConstraint.constant = format.verticalMargin
     }
-    
+
+    /// 左边
     func leftText() {
         primaryButtonCenterXConstraint.isActive = false
         primaryButtonRightConstraint.isActive = false
@@ -70,7 +74,8 @@ extension EmptyStateView {
         titleLabel.textAlignment = .left
         descriptionLabel.textAlignment = .left
     }
-    
+
+    /// 中间
     func centerText() {
         primaryButtonLeftConstraint.isActive = false
         primaryButtonRightConstraint.isActive = false
@@ -80,7 +85,8 @@ extension EmptyStateView {
         titleLabel.textAlignment = .center
         descriptionLabel.textAlignment = .center
     }
-    
+
+    /// 右边
     func rightText() {
         primaryButtonCenterXConstraint.isActive = false
         primaryButtonLeftConstraint.isActive = false

@@ -8,10 +8,12 @@
 
 import UIKit
 
+// event
 public protocol EmptyStateDelegate: class {
     func emptyState(emptyState: EmptyState, didPressButton button: UIButton)
 }
 
+//
 public protocol EmptyStateDataSource: class {
     func imageForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> UIImage?
     func titleForState(_ state: CustomState, inEmptyState emptyState: EmptyState) -> String?
@@ -23,9 +25,11 @@ public class EmptyState {
     
     public weak var delegate: EmptyStateDelegate?
     public weak var dataSource: EmptyStateDataSource?
-    
+    /// 显示的空白页
     private var emptyStateView: EmptyStateView!
+    /// tableView
     private var tableView: UITableView?
+    /// 分割样式
     private var separatorStyle: UITableViewCell.SeparatorStyle = .none
     
     /// Show or hide view
@@ -66,6 +70,7 @@ public class EmptyState {
         // Create empty state view
         emptyStateView = EmptyStateView.view
         emptyStateView.isHidden = true
+        // 点击
         emptyStateView.actionButton = { [weak self] (button) in
             self?.didPressActionButton(button)
         }
@@ -78,13 +83,14 @@ public class EmptyState {
         } else if let view = view as? UICollectionView {
             view.backgroundView = emptyStateView
         } else {
+            // 添加约束
             emptyStateView.fixConstraintsInView(view)
         }
     }
 }
 
 extension EmptyState {
-    
+    // 显示
     public func show(_ state: CustomState? = nil) {
         self.state = state
         hidden = false

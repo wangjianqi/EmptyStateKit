@@ -8,7 +8,7 @@
 
 import UIKit
 import EmptyStateKit
-
+/// 实现
 enum MainState: CustomState {
     
     case noInternet

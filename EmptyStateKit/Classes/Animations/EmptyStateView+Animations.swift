@@ -12,6 +12,7 @@ import UIKit
 extension EmptyStateView {
     
     // Fade animation
+    /// 透明度动画
     func fade(_ duration1: TimeInterval, _ duration2: TimeInterval) {
         
         imageView.alpha = 0
@@ -31,6 +32,7 @@ extension EmptyStateView {
     }
     
     // Scale animation
+    /// scale动画
     func scale(_ duration1: TimeInterval, _ duration2: TimeInterval) {
         
         imageView.transform = CGAffineTransform(scaleX: 0, y: 0)

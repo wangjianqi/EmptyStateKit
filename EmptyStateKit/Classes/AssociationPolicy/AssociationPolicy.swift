@@ -6,7 +6,7 @@
 
 import Foundation
 
-
+// 策略
 enum AssociationPolicy: UInt {
     // raw values map to objc_AssociationPolicy's raw values
     case assign = 0
@@ -46,5 +46,5 @@ extension AssociatedObjects {
         objc_removeAssociatedObjects(self)
     }
 }
-
+// 遵守协议
 extension NSObject: AssociatedObjects { }

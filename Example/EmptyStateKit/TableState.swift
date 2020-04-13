@@ -8,7 +8,7 @@
 
 import UIKit
 import EmptyStateKit
-
+/// 配置空白页
 enum TableState: CustomState {
     
     case noNotifications

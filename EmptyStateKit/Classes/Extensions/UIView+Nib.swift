@@ -20,7 +20,7 @@ extension UIView {
         contentView.fixConstraintsInView(self)
         return contentView
     }
-    
+    /// 添加约束
     func fixConstraintsInView(_ container: UIView!) -> Void {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.frame = container.frame

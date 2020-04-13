@@ -39,6 +39,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func viewDidPressHereButton(_ sender: UIButton) {
+        // 显示空白页
         view.emptyState.show(MainState.noInternet)
     }
     
@@ -55,6 +56,7 @@ class MainViewController: UIViewController {
 extension MainViewController: EmptyStateDelegate {
     
     func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        // 隐藏
         view.emptyState.hide()
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 public extension String {
-    
+    // 转颜色
     var hexColor: UIColor {
         
         let hexString = self.trimmingCharacters(in: .whitespacesAndNewlines)
